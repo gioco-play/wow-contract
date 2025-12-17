@@ -27,5 +27,23 @@ interface WowServiceInterface {
      */
     function gameDetail(string $op_code, string $account, string $bet_id);
 
+    /**
+     * 抓取遊戲紀錄
+     *
+     * @param string $opCode
+     * @param int $pastMinutes
+     * @param string $cacheKey
+     * @return mixed
+     */
+    function betLogGrabber(string $opCode, int $pastMinutes, string $cacheKey);
+
+    /**
+     * 全營商 抓取遊戲紀錄
+     *
+     * @param int $past_minutes
+     * @return mixed
+     */
+    function betLogGrabberAll(int $past_minutes);
+
 }
 
